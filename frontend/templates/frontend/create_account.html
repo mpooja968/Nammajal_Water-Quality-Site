@@ -1,0 +1,194 @@
+<!-- frontend/templates/frontend/create_account.html -->
+{% extends 'frontend/base.html' %}
+{% load static %}
+{% block content %}
+<div class="title-box">
+    <h1 class="app-name">NammaJal</h1>
+</div>
+<div class="create-account-container">
+    <form method="post">
+        {% csrf_token %}
+        <h2>Create Account</h2>
+        {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <div class="message {{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        <input type="email" name="email" placeholder="Email" required>
+
+        <div class="form-group">
+    <label for="password">Password:</label>
+    <div class="password-container">
+        <input type="password" id="password" name="password" required>
+        <span class="toggle-password" onclick="togglePassword('password')">&#x1F441;</span>
+    </div>
+</div>
+<div class="form-group">
+    <label for="confirm_password">Confirm Password:</label>
+    <div class="password-container">
+        <input type="password" id="confirm_password" name="confirm_password" required>
+        <span class="toggle-password" onclick="togglePassword('confirm_password')">&#x1F441;</span>
+    </div>
+</div>
+
+        <button type="submit">Create Account</button>
+        <a href="{% url 'signin' %}">Already have an account? Sign In</a>
+    </form>
+</div>
+<style>
+    /* Header Styles */
+    /* Header Styles */
+.title-box {
+    max-width: 1350px;
+    margin: 60px auto 40px auto; /* Center the box and add margin for spacing */
+    padding: 30px;
+    background-color: #00796b;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    text-align: center;
+    
+}
+
+.app-name {
+    font-size: 2.5em; /* Increased font size */
+    color: white; /* Text color changed to white */
+    margin: 0;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8); /* Glow effect with text shadow */
+}
+
+/* Create Account Container Styles */
+.create-account-container {
+    padding: 120px 20px 20px; /* Adjust padding to account for the fixed header */
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+    /* Create Account Container */
+.create-account-container {
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 500px; /* Restrict the width for a more focused form layout */
+    margin: 0 auto; /* Center the container */
+    background-color: #ffffff; /* White background for contrast */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border: 2px solid #00796b; /* Border matching the color theme */
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Increased gap for better spacing */
+    padding: 20px;
+}
+
+form h2 {
+    text-align: center;
+    color: #00796b;
+    text-shadow: 0px 0px 5px rgba(0, 121, 107, 0.5);
+}
+
+form input,
+form textarea {
+    padding: 12px;
+    border: 1px solid #00796b;
+    border-radius: 10px;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+    font-family: inherit;
+    transition: all 0.3s ease-in-out;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #004d40;
+    box-shadow: inset 0 4px 8px rgba(0, 121, 107, 0.2);
+}
+
+/* Password Toggle */
+.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #00796b;
+}
+
+/* Submit Button */
+form button {
+    background-color: #00796b;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #004d40;
+    transform: translateY(-3px);
+}
+
+form button:active {
+    transform: translateY(0);
+}
+
+/* Link to Sign In */
+form a {
+    text-align: center;
+    color: #00796b;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+form a:hover {
+    color: #004d40;
+}
+
+/* Messages Styling */
+.messages {
+    margin-bottom: 20px;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.message.error {
+    background-color: #ffcdd2;
+    color: #c62828;
+    border: 1px solid #c62828;
+}
+
+.message.success {
+    background-color: #c8e6c9;
+    color: #2e7d32;
+    border: 1px solid #2e7d32;
+}
+</style>
+<script>
+    function togglePassword(fieldId) {
+        const passwordField = document.getElementById(fieldId);
+        const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordField.setAttribute('type', type);
+        // Change the icon accordingly
+        const toggleIcon = passwordField.nextElementSibling;
+        toggleIcon.innerHTML = type === 'password' ? '&#x1F441;' : '&#x1F576;';
+    }
+</script>
+
+{% endblock %}

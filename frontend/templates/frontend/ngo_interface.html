@@ -1,0 +1,669 @@
+{% extends 'frontend/base.html' %}
+{% load static %}
+{% block content %}
+<div class="ngo-interface-container">
+    <!-- Welcome Message and Navigation Bar -->
+    <div class="welcome-message">
+        <div class="home-button">
+            <a href="{% url 'welcome' %}" class="button">Home</a>
+        </div>
+        <div class="welcome-text">
+            <h2>Welcome to NammaJal NGO Interface</h2>
+        </div>
+        <div class="logout-button">
+            <a href="{% url 'user_logout' %}" class="button">Logout</a>
+        </div>
+    </div>
+    <!-- Navigation Bar -->
+    <div class="navbar-container">
+
+    <nav class="navbar">
+        <a href="#" onclick="loadSection('dashboard')">Dashboard</a>
+        <a href="#" onclick="loadSection('insights')">Insights</a>
+        <a href="#" onclick="loadSection('recommendations')">Recommendations</a>
+        
+        <a href="#" onclick="loadSection('contact')">Review Us</a>
+    </nav>
+    </div>
+    <marquee> <pre>Almost all Earth’s water is in the oceans...............                                    Most freshwater is in ice................                            A lot can live in one drop of water..................</pre></marquee>
+    <!-- Main Page Content: Slider and NGO Content -->
+    <div id="main-content">
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide fade">
+                    <img src="{% static 'images/ngo4.jpeg' %}" alt="NGO Image 1">
+                </div>
+                <div class="slide fade">
+                    <img src="{% static 'images/ngo2.jpeg' %}" alt="NGO Image 2">
+                </div>
+                <div class="slide fade">
+                    <img src="{% static 'images/ngo3.jpeg' %}" alt="NGO Image 3">
+                </div>
+                <div class="slide fade">
+                    <img src="{% static 'images/ngo1.jpeg' %}" alt="NGO Image 4">
+                </div>
+                <div class="slide fade">
+                    <img src="{% static 'images/ngo5.jpeg' %}" alt="NGO Image 5">
+                </div>
+                <!-- Navigation Arrows -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+
+        <div class="ngo-content">
+            <h2>About Our NGO</h2>
+            <p>We are dedicated to improving water quality in various regions through conservation efforts, education, and community involvement. Our projects aim to address the challenges faced by local communities and promote sustainable practices for a cleaner and healthier environment.</p>
+            <p>Join us in our mission to make a difference. Your support helps us to implement various initiatives and create a positive impact on the environment.</p>
+        </div>
+    </div>
+
+    <!-- Content Area -->
+    <div id="content-area">
+        <div id="dashboard-content" class="content-section" style="display:none;">
+            <h2>Dashboard</h2>
+            <div class="tableauPlaceholder" id="viz1726045128766" style="position: relative; width: 1000px; height: 750px; margin: 0 auto;">
+                <noscript>
+                    <a href="#">
+                        <img alt="ANALYSIS OF WATER QUALITY IN BANGALORE" 
+                             src="https://public.tableau.com/static/images/DD/DDV_CAC212/Dashboard3/1_rss.png" 
+                             style="border: none; width: 1000px; height: 750px;" />
+                    </a>
+                </noscript>
+                <object class="tableauViz" style="display:none; width: 1000px; height: 750px;">
+                    <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+                    <param name="embed_code_version" value="3" />
+                    <param name="site_root" value="" />
+                    <param name="name" value="DDV_CAC212/Dashboard3" />
+                    <param name="tabs" value="no" />
+                    <param name="toolbar" value="yes" />
+                    <param name="static_image" value="https://public.tableau.com/static/images/DD/DDV_CAC212/Dashboard3/1.png" />
+                    <param name="animate_transition" value="yes" />
+                    <param name="display_static_image" value="yes" />
+                    <param name="display_spinner" value="yes" />
+                    <param name="display_overlay" value="yes" />
+                    <param name="display_count" value="yes" />
+                    <param name="language" value="en-US" />
+                    <param name="filter" value="publish=yes" />
+                </object>
+            </div>
+            
+            <script type="text/javascript">
+                var divElement = document.getElementById('viz1726045128766');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+            
+                vizElement.style.width = '1000px';
+                vizElement.style.height = '750px';
+            
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+            
+            <div class='tableauPlaceholder' id='viz1726046381924' style='position: relative; width: 1000px; height: 750px; margin: 0 auto;'>
+                <noscript>
+                  <a href='#'>
+                    <img alt='ANALYSIS OF WATER QUALITY IN BANGALORE'
+                         src='https://public.tableau.com/static/images/NA/NAMMAJAL/Dashboard2/1_rss.png'
+                         style='border: none; width: 1000px; height: 750px;' />
+                  </a>
+                </noscript>
+                <object class='tableauViz' style='display:none; width: 1000px; height: 750px;'>
+                  <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                  <param name='embed_code_version' value='3' />
+                  <param name='site_root' value='' />
+                  <param name='name' value='NAMMAJAL/Dashboard2' />
+                  <param name='tabs' value='no' />
+                  <param name='toolbar' value='yes' />
+                  <param name='static_image' value='https://public.tableau.com/static/images/NA/NAMMAJAL/Dashboard2/1.png' />
+                  <param name='animate_transition' value='yes' />
+                  <param name='display_static_image' value='yes' />
+                  <param name='display_spinner' value='yes' />
+                  <param name='display_overlay' value='yes' />
+                  <param name='display_count' value='yes' />
+                  <param name='language' value='en-US' />
+                  <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+            
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1726046381924');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+            
+                vizElement.style.width = '1000px';
+                vizElement.style.height = '750px';
+            
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+            
+            <div class='tableauPlaceholder' id='viz1726046223044' style='position: relative; width: 1000px; height: 750px; margin: 0 auto;'>
+                <noscript>
+                  <a href='#'>
+                    <img alt='ANALYSIS OF WATER QUALITY IN BANGALORE'
+                         src='https://public.tableau.com/static/images/DD/DDV_CAC212_17260461642810/Dashboard1/1_rss.png'
+                         style='border: none; width: 1000px; height: 750px;' />
+                  </a>
+                </noscript>
+                <object class='tableauViz' style='display:none; width: 1000px; height: 750px;'>
+                  <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                  <param name='embed_code_version' value='3' />
+                  <param name='site_root' value='' />
+                  <param name='name' value='DDV_CAC212_17260461642810/Dashboard1' />
+                  <param name='tabs' value='no' />
+                  <param name='toolbar' value='yes' />
+                  <param name='static_image' value='https://public.tableau.com/static/images/DD/DDV_CAC212_17260461642810/Dashboard1/1.png' />
+                  <param name='animate_transition' value='yes' />
+                  <param name='display_static_image' value='yes' />
+                  <param name='display_spinner' value='yes' />
+                  <param name='display_overlay' value='yes' />
+                  <param name='display_count' value='yes' />
+                  <param name='language' value='en-US' />
+                  <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+            
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1726046223044');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+            
+                vizElement.style.width = '1000px';
+                vizElement.style.height = '750px';
+            
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+
+        </div>
+        <div id="insights-content" class="content-section" style="display:none;">
+            <h2>Insights Report</h2>
+            <form id="insights-form" method="get" action="{% url 'insights' %}">
+                <input type="text" name="lake_name" placeholder="Search for a lake" required>
+                <button type="submit">Search</button>
+            </form>
+
+            <div id="insights-results">
+                {% if data %}
+                <table>
+                    <tr><th>Lake Name</th><td>{{ data.lake_name }}</td></tr>
+                    <tr><th>Polluted or Not</th><td>{{ data.pollution_status }}</td></tr>
+                    <tr><th>Level of Pollution</th><td>{{ data.pollution_level }}</td></tr>
+                    <tr><th>Causes of Pollution</th><td>{{ data.cause_of_pollution }}</td></tr>
+                    <tr><th>Effects of Pollution</th><td>{{ data.effects_of_pollution }}</td></tr>
+                    <tr><th>Suggestions</th><td>{{ data.suggestions}}</td></tr>
+                </table>
+                <div class="back-to-main">
+                    <a href="#" onclick="clearInsights()" class="button">Back to Main Page</a>
+                </div>
+                {% elif query %}
+                <p>No data found for "{{ query }}"</p>
+                {% endif %}
+            </div>
+
+            
+        </div>
+
+            
+        </div>
+        <div id="recommendations-content" class="content-section" style="display:none;">
+            
+            <h2>Recommendations for Preventing Water Pollution</h2>
+            <p>
+                Water pollution is a major environmental issue that impacts the health of ecosystems and human communities. To effectively prevent and mitigate water pollution, a multifaceted approach is necessary. The following recommendations provide a comprehensive strategy to protect and improve water quality across various water bodies:
+            </p>
+            <h3>1. Promote Sustainable Agricultural Practices</h3>
+            <p>
+                Agriculture is a significant source of water pollution due to the runoff of fertilizers, pesticides, and herbicides. To reduce the impact of agricultural activities on water quality, the following practices should be encouraged:
+            </p>
+            <ul>
+                <li>Implement integrated pest management (IPM) to minimize the use of chemical pesticides.</li>
+                <li>Adopt organic farming techniques that reduce the reliance on synthetic fertilizers and pesticides.</li>
+                <li>Utilize precision agriculture to optimize the use of fertilizers and pesticides, minimizing runoff.</li>
+                <li>Promote the use of cover crops and buffer strips to reduce soil erosion and nutrient runoff.</li>
+                <li>Encourage the establishment of riparian zones to filter pollutants before they reach water bodies.</li>
+            </ul>
+                
+            <h3>2. Enhance Industrial Waste Management</h3>
+            <p>
+                Industrial activities often lead to the discharge of pollutants into water bodies. Effective management of industrial waste is crucial to prevent contamination:
+            </p>
+            <ul>
+                <li>Enforce strict regulations on industrial discharge limits and ensure compliance through regular monitoring.</li>
+                <li>Promote the adoption of cleaner production technologies that reduce the generation of pollutants.</li>
+                <li>Encourage industries to treat and recycle their wastewater before discharge.</li>
+                <li>Implement waste minimization practices to reduce the overall volume of waste generated.</li>
+                <li>Foster collaboration between industries and environmental agencies to develop and implement best practices.</li>
+            </ul>
+                
+            <h3>3. Improve Wastewater Treatment</h3>
+            <p>
+                Effective treatment of wastewater is essential for protecting water quality. Communities and municipalities should focus on:
+            </p>
+            <ul>
+                <li>Investing in modern wastewater treatment infrastructure to ensure the effective removal of contaminants.</li>
+                <li>Promoting the use of advanced treatment technologies, such as membrane bioreactors and constructed wetlands.</li>
+                <li>Ensuring regular maintenance and upgrades of existing treatment facilities to prevent malfunctions.</li>
+                <li>Encouraging decentralized treatment systems for small communities and rural areas.</li>
+                <li>Educating the public about proper disposal practices to avoid contamination of the wastewater system.</li>
+            </ul>
+                
+            <h3>4. Raise Public Awareness and Education</h3>
+            <p>
+                Public awareness and education play a vital role in preventing water pollution. Strategies to engage and inform the community include:
+            </p>
+            <ul>
+                <li>Conducting public education campaigns on the importance of water conservation and pollution prevention.</li>
+                <li>Organizing community clean-up events to address pollution and raise awareness.</li>
+                <li>Incorporating water pollution topics into school curricula to educate students from a young age.</li>
+                <li>Providing resources and tools for individuals to monitor and report pollution incidents.</li>
+                <li>Encouraging local organizations and businesses to participate in water protection initiatives.</li>
+            </ul>
+                
+            <h3>5. Strengthen Environmental Regulations and Enforcement</h3>
+            <p>
+                Effective regulation and enforcement are crucial for ensuring compliance with water protection standards:
+            </p>
+            <ul>
+                <li>Develop and implement comprehensive water quality standards and regulations.</li>
+                <li>Increase funding for environmental agencies to enhance monitoring and enforcement capabilities.</li>
+                <li>Foster collaboration between government agencies, non-governmental organizations, and the private sector.</li>
+                <li>Ensure transparency and public access to information regarding water quality and pollution incidents.</li>
+                <li>Encourage citizen participation in environmental decision-making processes.</li>
+            </ul>
+                
+            <h3>6. Support Research and Innovation</h3>
+            <p>
+                Research and innovation are key to advancing our understanding and management of water pollution:
+            </p>
+            <ul>
+                <li>Invest in research to develop new technologies for pollution detection, treatment, and prevention.</li>
+                <li>Encourage collaboration between academic institutions, government agencies, and industry stakeholders.</li>
+                <li>Support initiatives that focus on the restoration of polluted water bodies and the development of sustainable solutions.</li>
+                <li>Promote the sharing of knowledge and best practices through conferences, publications, and online platforms.</li>
+                <li>Advocate for policies that support scientific research and innovation in water management.</li>
+            </ul>
+                
+            <p>
+                By implementing these recommendations, communities can make significant strides toward preventing and mitigating water pollution. A collective effort involving individuals, industries, and government agencies is essential to safeguarding our water resources for future generations.
+            </p>
+        </div>
+        <div id="contact-content" class="content-section" style="display:none;">
+            <h2>Review Us</h2>
+            <form method="post" action="{% url 'submit_contact1' %}" onsubmit="return handleSubmitContact()">
+                {% csrf_token %}
+                
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+                
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" required></textarea>
+                
+                <label for="rating">Rate the App:</label>
+                <fieldset>
+                    <legend>Rating (1 to 5):</legend>
+                    {% for i in "12345" %}
+                        <label>
+                            <input type="radio" name="rating" value="{{ i }}" {% if i == rating %}checked{% endif %}>
+                            {{ i }}
+                        </label>
+                    {% endfor %}
+                </fieldset>
+        
+                <button type="submit">Submit</button>
+            </form>
+        
+            {% if messages %}
+            <div>
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+        
+            <!-- Back to Home Page Button -->
+            <div class="back-to-main">
+                <a href="#" onclick="loadSection('main-content')" class="button">Back to Home Page</a>
+            </div>
+        </div>
+        
+    
+        
+</div>
+
+<style>
+    .ngo-interface-container {
+        padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Aesthetic font */
+    }
+    /* Welcome Message */
+.welcome-message {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e0f7fa;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.welcome-text h1 {
+    font-size: 2.5em;
+    color: #00796b;
+    text-shadow: 0px 0px 10px rgba(0, 121, 107, 0.5); /* Glow effect */
+}
+
+.home-button .button,
+.logout-button .button {
+    background-color: #00796b;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.home-button .button:hover,
+.logout-button .button:hover {
+    background-color: #004d40;
+}
+    /* Navigation Bar */
+.navbar-container {
+    background-color: #00796b;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    font-size: 1.2em;
+    padding: 8px 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #b2dfdb;
+}
+
+.marquee {
+    width: 100%;
+    color: #189c86;
+    font-size: 1.1em;
+    padding: 10px;
+    border-radius: 0 0 8px 8px;
+    text-shadow: 0px 10px 10px rgba(0, 121, 107, 0.5); /* Glow effect */
+    text-align: center;
+}
+
+   /* Slider and Image Styles */
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.fade {
+    animation: fade 1.5s ease-in-out;
+}
+
+@keyframes fade {
+    from { opacity: 0.4 }
+    to { opacity: 1 }
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.user-content,
+.content-section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin-bottom: 20px;
+}
+
+/* Insights, Complain, Contact Form */
+.content-section h2 {
+    color: #00796b;
+    text-shadow: 0px 0px 5px rgba(0, 121, 107, 0.5); /* Glow effect */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 60%; /* Reduce the width */
+    margin: 0 auto; /* Center the form */
+    padding: 20px;
+    border: 2px solid #00796b;
+    border-radius: 15px;
+    box-shadow: 0px 15px 12px rgba(0, 121, 107, 0.2); /* Add a shadow for depth */
+    background-color: #f9f9f9; /* Light background color */
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    padding: 12px; /* Slightly increase padding */
+    border: 1px solid #00796b;
+    border-radius: 10px;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1); /* Enhanced inset shadow */
+    font-family: inherit;
+    transition: all 0.3s ease-in-out; /* Add smooth transitions */
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #004d40; /* Change border color on focus */
+    box-shadow: inset 0 4px 8px rgba(0, 121, 107, 0.2); /* More prominent shadow */
+}
+
+form button {
+    background-color: #00796b;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: inherit;
+}
+
+form button:hover {
+    background-color: #004d40;
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+form button:active {
+    transform: translateY(0); /* Return to original position on click */
+}
+
+.back-to-main .button {
+    background-color: #00796b;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-main .button:hover {
+    background-color: #004d40;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #00796b;
+    text-align: left;
+}
+
+th {
+    background-color: #00796b;
+    color: white;
+}
+
+/* Marquee */
+.marquee {
+    background-color: #004d40;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+</style>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex-1].style.display = "block";  
+        setTimeout(showSlides, 10000); // Change image every 10 seconds
+    }
+
+    function plusSlides(n) {
+        slideIndex += n;
+        if (slideIndex > document.getElementsByClassName("slide").length) {slideIndex = 1}
+        if (slideIndex < 1) {slideIndex = document.getElementsByClassName("slide").length}
+        showSlides();
+    }
+
+    function currentSlide(n) {
+        slideIndex = n;
+        showSlides();
+    }
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        if (slideIndex < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slides[slideIndex-1].style.display = "block";  
+    }
+
+    
+
+    function loadSection(section) {
+        // Hide all sections
+        document.querySelectorAll('.content-section').forEach(sec => sec.style.display = 'none');
+        document.getElementById('main-content').style.display = 'none';
+
+        // Show the selected section
+        if (section === 'main-content') {
+            document.getElementById('main-content').style.display = 'block';
+        } else {
+            document.getElementById(section + '-content').style.display = 'block';
+        }
+    }
+    function handleSubmitContact() {
+        const form = document.getElementById('contact-form');
+        const formData = new FormData(form);
+        fetch("{% url 'submit_contact1' %}", {
+            method: 'POST',
+            body: formData
+        }).then(response => response.json()).then(data => {
+            const messagesDiv = document.getElementById('contact-messages');
+            messagesDiv.innerHTML = `<p>${data.message}</p>`;
+            form.reset(); // Clear the form fields
+        }).catch(error => console.error('Error:', error));
+        return false; // Prevent default form submission
+    }
+
+function clearInsights() {
+        // Clear the insights results
+        document.getElementById('insights-results').innerHTML = '';
+        document.getElementById('insights-form').reset();
+
+        // Show the main content
+        document.getElementById('main-content').style.display = 'block';
+
+        // Hide Insights content
+        document.getElementById('insights-content').style.display = 'none';
+
+        // Ensure other sections are hidden
+        document.querySelectorAll('.content-section').forEach(sec => sec.style.display = 'none');
+    }
+
+    // Keep Insights section open if there are search results
+    window.onload = function() {
+        if (document.getElementById('insights-results').innerHTML.trim() !== '') {
+            loadSection('insights');
+        }
+    };
+
+</script>
+{% endblock %}

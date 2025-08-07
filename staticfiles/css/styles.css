@@ -1,0 +1,178 @@
+/* frontend/static/css/styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa; /* Light aqua blue background */
+    color: #00796b; /* Darker teal text */
+    margin: 0;
+    padding: 0;
+}
+
+.welcome-container {
+    text-align: center;
+    padding: 50px;
+}
+
+.welcome-logo img {
+    width: 150px;
+    height: auto;
+}
+
+.welcome-title {
+    font-size: 3em;
+    margin: 20px 0;
+    color: #004d40; /* Darker teal */
+}
+
+.welcome-slogan {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #00796b; /* Darker teal */
+}
+
+.welcome-about {
+    margin: 20px 0;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+/* New container for centering images and buttons */
+.image-buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between images */
+}
+
+.welcome-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    padding: 10px;
+    background: #f0f0f0;
+    width: 200px; /* Ensure containers are the same size */
+    height: 300px; /* Adjust height as needed */
+    position: relative;
+}
+
+.welcome-image-container img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.option-button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007BFF;
+    border-radius: 5px;
+    font-size: 1.1em;
+    position: absolute;
+    bottom: 10px; /* Position button inside the container */
+}
+
+.signin-container, .create-account-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+p {
+    text-align: center;
+}
+
+/* Ensure to include this in your CSS file */
+.messages {
+    margin-bottom: 20px;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.signin-container, .create-account-container {
+    text-align: center;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.signin-container form, .create-account-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    padding-right: 30px; /* Space for the toggle icon */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    user-select: none;
+}
