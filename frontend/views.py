@@ -344,8 +344,8 @@ import os
 
 
 # Set your API keys
-OPENAI_API_KEY = 'sk-GsVFJNweyEC41pcgDXdWMbNQetEjxXaEmFbguloABaT3BlbkFJgYcMI169pzM8ewqN0UdNbwHvG2lwQyRnO3foelyY8A'
-GROK_AI_API_KEY = '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'
+OPENAI_API_KEY = 'give_your_api_key'
+GROK_AI_API_KEY = 'give_your_api_key'
 
 # Initialize OpenAI
 openai.api_key = OPENAI_API_KEY
