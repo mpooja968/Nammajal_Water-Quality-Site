@@ -8,24 +8,24 @@ NammaJal is a comprehensive web application designed to monitor, analyze, and co
 1) Real-time Pollution Monitoring using IoT sensors and government datasets.
 2) Interactive Lake Map Dashboard with pollution insights and trends.
 3) Pollution Source Detection using Machine Learning (Decision Tree, Random Forest).
-Health Risk Analysis based on water contaminants and safety thresholds.
-User Interfaces tailored for NGOs and general public.
-Complaint Registration System for community reporting.
-Read-Aloud & Multilingual Support to increase inclusivity.
-Chatbot Assistant powered by Botpress with OpenAI NLP.
-Reports & Analytics for executive summaries, predictions, and compliance tracking.
+4) Health Risk Analysis based on water contaminants and safety thresholds.
+5) User Interfaces tailored for NGOs and general public.
+6) Complaint Registration System for community reporting.
+7) Read-Aloud & Multilingual Support to increase inclusivity.
+8) Chatbot Assistant powered by Botpress with OpenAI NLP.
+9) Reports & Analytics for executive summaries, predictions, and compliance tracking.
 
 **🏗️ Tech Stack:**
-Frontend: HTML, CSS, JavaScript
-Backend: Python (Django Framework)
-Database: MySQL, MongoDB
-ML Libraries: Scikit-learn, TensorFlow/Keras
-DevOps & Tools: Git, Docker, Jenkins, GitHub
-External APIs: Google Translate, Government Open Data, Google Maps
-Visualization: Interactive dashboards and map-based data plots
+i) **Frontend:** HTML, CSS, JavaScript
+ii) **Backend:** Python (Django Framework)
+iii) **Database:** MySQL, MongoDB
+iv) **ML Libraries:** Scikit-learn, TensorFlow/Keras
+v) **DevOps & Tools:** Git, Docker, Jenkins, GitHub
+vi) **External APIs:** Google Translate, Government Open Data, Google Maps
+vii) **Visualization:** Interactive dashboards and map-based data plots
 
 **🧠 Machine Learning:**
-Pollution Classification – Using Decision Tree Classifier
-Cause-Effect Prediction – Powered by Random Forest
-Anomaly Detection – Isolation Forest, One-Class SVM
-Forecasting – Time-series models for future pollution trends
+I) **Pollution Classification** – Using Decision Tree Classifier
+II) **Cause-Effect Prediction** – Powered by Random Forest
+III) **Anomaly Detection**– Isolation Forest, One-Class SVM
+IV) **Forecasting** – Time-series models for future pollution trends
