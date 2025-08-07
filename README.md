@@ -16,6 +16,7 @@ NammaJal is a comprehensive web application designed to monitor, analyze, and co
 9) Reports & Analytics for executive summaries, predictions, and compliance tracking.
 
 **🏗️ Tech Stack:**
+
 i) **Frontend:** HTML, CSS, JavaScript
 
 ii) **Backend:** Python (Django Framework)
@@ -31,6 +32,7 @@ vi) **External APIs:** Google Translate, Government Open Data, Google Maps
 vii) **Visualization:** Interactive dashboards and map-based data plots
 
 **🧠 Machine Learning:**
+
 I) **Pollution Classification** – Using Decision Tree Classifier
 
 II) **Cause-Effect Prediction** – Powered by Random Forest
