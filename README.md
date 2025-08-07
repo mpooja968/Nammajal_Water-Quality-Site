@@ -6,9 +6,7 @@ NammaJal is a comprehensive web application designed to monitor, analyze, and co
 **🔍 Key Features:**
 
 1) Real-time Pollution Monitoring using IoT sensors and government datasets.
-  
 2) Interactive Lake Map Dashboard with pollution insights and trends.
-
 3) Pollution Source Detection using Machine Learning (Decision Tree, Random Forest).
 Health Risk Analysis based on water contaminants and safety thresholds.
 User Interfaces tailored for NGOs and general public.
