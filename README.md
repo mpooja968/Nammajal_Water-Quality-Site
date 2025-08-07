@@ -17,15 +17,24 @@ NammaJal is a comprehensive web application designed to monitor, analyze, and co
 
 **🏗️ Tech Stack:**
 i) **Frontend:** HTML, CSS, JavaScript
+
 ii) **Backend:** Python (Django Framework)
+
 iii) **Database:** MySQL, MongoDB
+
 iv) **ML Libraries:** Scikit-learn, TensorFlow/Keras
+
 v) **DevOps & Tools:** Git, Docker, Jenkins, GitHub
+
 vi) **External APIs:** Google Translate, Government Open Data, Google Maps
+
 vii) **Visualization:** Interactive dashboards and map-based data plots
 
 **🧠 Machine Learning:**
 I) **Pollution Classification** – Using Decision Tree Classifier
+
 II) **Cause-Effect Prediction** – Powered by Random Forest
+
 III) **Anomaly Detection**– Isolation Forest, One-Class SVM
+
 IV) **Forecasting** – Time-series models for future pollution trends
